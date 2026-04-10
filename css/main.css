@@ -3,6 +3,8 @@
   --color-grey-500: #4d4f62;
   --color-grey-400: #6a7178;
   --color-white: #ffffff;
+  --color-background: #fafafa;
+  --color-shadow: rgba(131, 166, 210, 0.5);
   --border-color-red: #ea5454;
   --border-color-cyan: #44d3d2;
   --border-color-blue: #549ef2;
@@ -10,7 +12,9 @@
   --font-family-main: "Poppins";
   --fw-extraLight: 200;
   --fw-regular: 400;
-  --fw--semiBold: 600;
+  --fw-semiBold: 600;
+  --border-radius: 8px;
+  --shadow: 0 15px 30px -11px var(--color-shadow);
 }
 
 /**
@@ -203,4 +207,88 @@ svg * {
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
+}
+body {
+  font-family: var(--font-family-main), sans-serif;
+  color: var(--color-grey-500);
+  background-color: var(--color-background);
+  line-height: 1.4;
+  font-weight: var(--fw-regular);
+}
+
+.section {
+  padding-block: 3.5rem 2.875rem;
+}
+
+.container {
+  padding-inline: 1.875rem;
+}
+
+.attribution {
+  font-size: 0.6875rem;
+  text-align: center;
+}
+
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+.features__title {
+  margin-bottom: 16px;
+  font-size: clamp(24px, 2.5vw, 36px);
+  text-align: center;
+  letter-spacing: 0.25px;
+  font-weight: var(--fw-extraLight);
+}
+.features__title--accent {
+  font-weight: var(--fw-semiBold);
+}
+.features__subtitle {
+  max-width: 450px;
+  margin-bottom: 60px;
+  margin-inline: auto;
+  font-size: 15px;
+  letter-spacing: 0.1px;
+  text-align: center;
+}
+.features__list {
+  display: grid;
+  justify-content: center;
+  grid-template-columns: repeat(1, minmax(auto, 450px));
+  row-gap: 32px;
+}
+
+.feature__card {
+  --border-color: none;
+  padding: 32px 32px 47px;
+  border-top: 4px solid var(--border-color);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+.feature__card--cyan-border-top {
+  --border-color: var(--border-color-cyan);
+}
+.feature__card--red-border-top {
+  --border-color: var(--border-color-red);
+}
+.feature__card--orange-border-top {
+  --border-color: var(--border-color-orange);
+}
+.feature__card--blue-border-top {
+  --border-color: var(--border-color-blue);
+}
+.feature__title {
+  margin-bottom: 6px;
+  font-size: 20px;
+  line-height: 1.35;
+  font-weight: var(--fw-semiBold);
+}
+.feature__description {
+  margin-bottom: 32px;
+  font-size: 13px;
+  line-height: 1.6;
+  letter-spacing: 0.09px;
+}
+.feature__icon {
+  margin-left: auto;
 }/*# sourceMappingURL=main.css.map */
