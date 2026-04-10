@@ -9,9 +9,10 @@ body {
 }
 
 .section {
-  padding-block: clamp(56px, 7vw, 102px) clamp(46px, 11.32vw, 163px);
+  padding-block: clamp(3.5rem, 7vw, 6.375rem)
+    clamp(2.875rem, 11.32vw, 10.1875rem);
 }
 
 .container {
-  padding-inline: clamp(30px, 7.9vw, 163px);
+  padding-inline: clamp(1.875rem, 7.9vw, 10.1875rem);
 }

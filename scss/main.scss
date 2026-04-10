@@ -1,6 +1,7 @@
 @use "./utils/variables";
-@use "./utils/_normalize.scss";
+@use "./utils/normalize.scss";
 @use "./utils/globals";
 @use "./blocks/features";
 @use "./blocks/feature";
 @use "./blocks/attribution";
+@use "./utils/helpers";

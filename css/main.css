@@ -13,8 +13,8 @@
   --fw-extraLight: 200;
   --fw-regular: 400;
   --fw-semiBold: 600;
-  --border-radius: 8px;
-  --shadow: 0 15px 30px -11px var(--color-shadow);
+  --border-radius: 0.5rem;
+  --shadow: 0 0.9375rem 1.875rem -0.6875rem var(--color-shadow);
   --transition-duration: 250ms;
   --outline: 2px solid var(--border-color-orange);
 }
@@ -219,16 +219,16 @@ body {
 }
 
 .section {
-  padding-block: clamp(56px, 7vw, 102px) clamp(46px, 11.32vw, 163px);
+  padding-block: clamp(3.5rem, 7vw, 6.375rem) clamp(2.875rem, 11.32vw, 10.1875rem);
 }
 
 .container {
-  padding-inline: clamp(30px, 7.9vw, 163px);
+  padding-inline: clamp(1.875rem, 7.9vw, 10.1875rem);
 }
 
 .features__title {
-  margin-bottom: 16px;
-  font-size: clamp(24px, 2.75vw, 36px);
+  margin-bottom: 1rem;
+  font-size: clamp(1.5rem, 2.75vw, 2.25rem);
   text-align: center;
   letter-spacing: 0.25px;
   font-weight: var(--fw-extraLight);
@@ -237,34 +237,33 @@ body {
   font-weight: var(--fw-semiBold);
 }
 .features__subtitle {
-  width: clamp(316px, 60vw, 540px);
-  margin-bottom: clamp(60px, 5.14vw, 74px);
+  margin-bottom: clamp(3.75rem, 5.14vw, 4.625rem);
+  width: clamp(19.75rem, 60vw, 33.75rem);
   margin-inline: auto;
-  font-size: clamp(14px, 1.5vw, 16px);
+  font-size: clamp(0.875rem, 1.5vw, 1rem);
   letter-spacing: 0.1px;
   text-align: center;
 }
 .features__list {
   display: grid;
   justify-content: center;
-  grid-template-columns: repeat(1, minmax(auto, 450px));
+  grid-template-columns: repeat(1, minmax(auto, 28.125rem));
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "supervisor" "builder" "karma" "calculator";
   row-gap: 32px;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 48rem) {
   .features__list {
-    grid-template-columns: repeat(4, minmax(auto, 200px));
+    grid-template-columns: repeat(4, minmax(auto, 12.5rem));
     grid-template-rows: repeat(3, auto);
     column-gap: 32px;
     grid-template-areas: ". builder builder ." "supervisor supervisor karma karma" ". calculator calculator .";
   }
 }
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 90rem) {
   .features__list {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, auto);
-    column-gap: 32px;
     grid-template-areas: ".           builder   ." "supervisor  builder   calculator" "supervisor  karma     calculator" ".           karma     .";
   }
 }
@@ -286,11 +285,11 @@ body {
 }
 
 .feature__card {
-  --border-color: none;
+  --border-color: transparent;
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 32px 32px 47px;
+  padding: 2rem 2rem 2.9375rem;
   border-top: 4px solid var(--border-color);
   border-radius: var(--border-radius);
   box-shadow: var(--shadow);
@@ -308,14 +307,13 @@ body {
   --border-color: var(--border-color-blue);
 }
 .feature__title {
-  margin-bottom: 6px;
-  font-size: 20px;
+  margin-bottom: 0.375rem;
+  font-size: 1.25rem;
   line-height: 1.35;
   font-weight: var(--fw-semiBold);
 }
 .feature__description {
-  margin-bottom: 32px;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 1.6;
   letter-spacing: 0.09px;
 }
@@ -323,9 +321,13 @@ body {
   margin-left: auto;
 }
 
+.description-container {
+  margin-bottom: 2rem;
+}
+
 .attribution {
-  padding-block: 15px;
-  font-size: 12px;
+  padding-block: 0.9375rem;
+  font-size: 0.75rem;
   text-align: center;
 }
 
@@ -345,4 +347,17 @@ body {
   .link {
     transition-duration: 0.01ms;
   }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }/*# sourceMappingURL=main.css.map */
