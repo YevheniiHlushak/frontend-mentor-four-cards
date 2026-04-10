@@ -217,11 +217,11 @@ body {
 }
 
 .section {
-  padding-block: 3.5rem 2.875rem;
+  padding-block: clamp(56px, 7vw, 102px) clamp(46px, 11.32vw, 163px);
 }
 
 .container {
-  padding-inline: 1.875rem;
+  padding-inline: clamp(30px, 7.9vw, 163px);
 }
 
 .attribution {
@@ -235,7 +235,7 @@ body {
 
 .features__title {
   margin-bottom: 16px;
-  font-size: clamp(24px, 2.5vw, 36px);
+  font-size: clamp(24px, 2.75vw, 36px);
   text-align: center;
   letter-spacing: 0.25px;
   font-weight: var(--fw-extraLight);
@@ -244,10 +244,10 @@ body {
   font-weight: var(--fw-semiBold);
 }
 .features__subtitle {
-  max-width: 450px;
-  margin-bottom: 60px;
+  width: clamp(316px, 60vw, 540px);
+  margin-bottom: clamp(60px, 5.14vw, 74px);
   margin-inline: auto;
-  font-size: 15px;
+  font-size: clamp(14px, 1.5vw, 16px);
   letter-spacing: 0.1px;
   text-align: center;
 }
@@ -255,11 +255,48 @@ body {
   display: grid;
   justify-content: center;
   grid-template-columns: repeat(1, minmax(auto, 450px));
+  grid-template-rows: repeat(4, auto);
+  grid-template-areas: "supervisor" "builder" "karma" "calculator";
   row-gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .features__list {
+    grid-template-columns: repeat(4, minmax(auto, 200px));
+    grid-template-rows: repeat(3, auto);
+    column-gap: 32px;
+    grid-template-areas: ". builder builder ." "supervisor supervisor karma karma" ". calculator calculator .";
+  }
+}
+@media screen and (min-width: 1440px) {
+  .features__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, auto);
+    column-gap: 32px;
+    grid-template-areas: ".           builder       ." "supervisor  builder       karma" "supervisor  calculator    karma" ".           calculator    .";
+  }
+}
+
+.builder {
+  grid-area: builder;
+}
+
+.supervisor {
+  grid-area: supervisor;
+}
+
+.karma {
+  grid-area: karma;
+}
+
+.calculator {
+  grid-area: calculator;
 }
 
 .feature__card {
   --border-color: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   padding: 32px 32px 47px;
   border-top: 4px solid var(--border-color);
   border-radius: var(--border-radius);

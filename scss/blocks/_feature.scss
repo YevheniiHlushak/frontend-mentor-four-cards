@@ -2,6 +2,9 @@
   &__card {
     --border-color: none;
 
+    display: flex;
+    flex-direction: column;
+    height: 100%;
     padding: 32px 32px 47px;
     border-top: 4px solid var(--border-color);
 
