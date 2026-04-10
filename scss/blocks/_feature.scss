@@ -36,6 +36,7 @@
   }
 
   &__description {
+    margin-bottom: 2rem;
     font-size: 0.8125rem;
     line-height: 1.6;
     letter-spacing: 0.09px;
@@ -44,8 +45,4 @@
   &__icon {
     margin-left: auto;
   }
-}
-
-.description-container {
-  margin-bottom: 2rem;
 }

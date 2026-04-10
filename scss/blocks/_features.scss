@@ -26,7 +26,6 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(1, minmax(auto, 28.125rem));
-    grid-template-rows: repeat(4, auto);
     grid-template-areas:
       "supervisor"
       "builder"
@@ -36,7 +35,6 @@
 
     @media screen and (min-width: $tablet-bp) {
       grid-template-columns: repeat(4, minmax(auto, 12.5rem));
-      grid-template-rows: repeat(3, auto);
       column-gap: 32px;
       grid-template-areas:
         ". builder builder ."
@@ -46,7 +44,6 @@
 
     @media screen and (min-width: $desktop-bp) {
       grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(4, auto);
       grid-template-areas:
         ".           builder   ."
         "supervisor  builder   calculator"
