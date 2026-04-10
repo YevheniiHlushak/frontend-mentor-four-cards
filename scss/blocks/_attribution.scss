@@ -1,7 +1,28 @@
 .attribution {
-  font-size: 0.6875rem;
+  padding-block: 15px;
+  font-size: 12px;
   text-align: center;
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+.link {
+  color: var(--border-color-orange);
+  transition:
+    color var(--transition-duration),
+    outline var(--transition-duration);
+
+  &:hover,
+  &:focus {
+    color: var(--border-color-cyan);
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: var(--outline);
+    outline-offset: 3px;
+    border-radius: var(--border-radius);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    transition-duration: 0.01ms;
+  }
 }
