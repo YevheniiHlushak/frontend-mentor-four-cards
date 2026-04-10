@@ -20,18 +20,96 @@
     />
 
     <title>Frontend Mentor | Four card feature section</title>
-
-    <style>
-      .attribution {
-        font-size: 0.6875rem;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
+    <main>
+      <section class="features section container">
+        <h1 class="features__title">
+          Reliable, efficient delivery <br />
+          <span class="features__title--accent">Powered by Technology</span>
+        </h1>
+        <p class="features__subtitle">
+          Our Artificial Intelligence powered tools use millions of project data
+          points to ensure that your project is successful
+        </p>
+        <ul class="features__list">
+          <li class="fetures__item feature">
+            <!-- <h2 class="feature__title">Supervisor</h2>
+            <p class="feature__description">
+              Monitors activity to identify project roadblocks
+            </p> -->
+            <article class="feature__card feature__card--cyan-border-top">
+              <dl>
+                <dt class="feature__title">Supervisor</dt>
+                <dd class="feature__description">
+                  Monitors activity to identify project roadblocks
+                </dd>
+              </dl>
+              <img
+                class="feature__icon"
+                src="./images/icon-supervisor.svg"
+                alt=""
+                width="64"
+                height="64"
+              />
+            </article>
+          </li>
+          <li class="fetures__item feature">
+            <article class="feature__card feature__card--red-border-top">
+              <dl>
+                <dt class="feature__title">Builder</dt>
+                <dd class="feature__description">
+                  Scans our talent network to create the optimal team for your
+                  project
+                </dd>
+              </dl>
+              <img
+                class="feature__icon"
+                src="./images/icon-team-builder.svg"
+                alt=""
+                width="64"
+                height="64"
+              />
+            </article>
+          </li>
+          <li class="fetures__item feature">
+            <article class="feature__card feature__card--orange-border-top">
+              <dl>
+                <dt class="feature__title">Karma</dt>
+                <dd class="feature__description">
+                  Regularly evaluates our talent to ensure quality
+                </dd>
+              </dl>
+              <img
+                class="feature__icon"
+                src="./images/icon-karma.svg"
+                alt=""
+                width="64"
+                height="64"
+              />
+            </article>
+          </li>
+          <li class="fetures__item feature">
+            <article class="feature__card feature__card--blue-border-top">
+              <dl>
+                <dt class="feature__title">Calculator</dt>
+                <dd class="feature__description">
+                  Uses data from past projects to provide better delivery
+                  estimates
+                </dd>
+              </dl>
+              <img
+                class="feature__icon"
+                src="./images/icon-calculator.svg"
+                alt=""
+                width="64"
+                height="64"
+              />
+            </article>
+          </li>
+        </ul>
+      </section>
+    </main>
     <footer class="attribution">
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.

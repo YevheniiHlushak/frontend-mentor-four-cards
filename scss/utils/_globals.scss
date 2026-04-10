@@ -1,0 +1,15 @@
+body {
+  font-family: var(--font-family-main), sans-serif;
+  color: var(--color-grey-500);
+  background-color: var(--color-background);
+  line-height: 1.4;
+  font-weight: var(--fw-regular);
+}
+
+.section {
+  padding-block: 3.5rem 2.875rem;
+}
+
+.container {
+  padding-inline: 1.875rem;
+}

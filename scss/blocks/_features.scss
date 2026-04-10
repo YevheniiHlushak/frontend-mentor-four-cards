@@ -1,0 +1,30 @@
+.features {
+  &__title {
+    margin-bottom: 16px;
+    font-size: clamp(24px, 2.5vw, 36px);
+    text-align: center;
+    letter-spacing: 0.25px;
+    font-weight: var(--fw-extraLight);
+
+    &--accent {
+      font-weight: var(--fw-semiBold);
+    }
+  }
+
+  &__subtitle {
+    max-width: 450px;
+    margin-bottom: 60px;
+    margin-inline: auto;
+    font-size: 15px;
+    letter-spacing: 0.1px;
+    text-align: center;
+  }
+
+  &__list {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(1, minmax(auto, 450px));
+
+    row-gap: 32px;
+  }
+}
