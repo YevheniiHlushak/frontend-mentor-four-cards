@@ -1,7 +1,9 @@
+@use "../utils/variables" as *;
+
 .features {
   &__title {
     margin-bottom: 16px;
-    font-size: clamp(24px, 2.5vw, 36px);
+    font-size: clamp(24px, 2.75vw, 36px);
     text-align: center;
     letter-spacing: 0.25px;
     font-weight: var(--fw-extraLight);
@@ -12,10 +14,11 @@
   }
 
   &__subtitle {
-    max-width: 450px;
-    margin-bottom: 60px;
+    width: clamp(316px, 60vw, 540px);
+
+    margin-bottom: clamp(60px, 5.14vw, 74px);
     margin-inline: auto;
-    font-size: 15px;
+    font-size: clamp(14px, 1.5vw, 16px);
     letter-spacing: 0.1px;
     text-align: center;
   }
@@ -24,7 +27,49 @@
     display: grid;
     justify-content: center;
     grid-template-columns: repeat(1, minmax(auto, 450px));
-
+    grid-template-rows: repeat(4, auto);
+    grid-template-areas:
+      "supervisor"
+      "builder"
+      "karma"
+      "calculator";
     row-gap: 32px;
+
+    @media screen and (min-width: $tablet-bp) {
+      grid-template-columns: repeat(4, minmax(auto, 200px));
+      grid-template-rows: repeat(3, auto);
+      column-gap: 32px;
+      grid-template-areas:
+        ". builder builder ."
+        "supervisor supervisor karma karma"
+        ". calculator calculator .";
+    }
+
+    @media screen and (min-width: $desktop-bp) {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(4, auto);
+      column-gap: 32px;
+      grid-template-areas:
+        ".           builder       ."
+        "supervisor  builder       karma"
+        "supervisor  calculator    karma"
+        ".           calculator    .";
+    }
   }
+}
+
+.builder {
+  grid-area: builder;
+}
+
+.supervisor {
+  grid-area: supervisor;
+}
+
+.karma {
+  grid-area: karma;
+}
+
+.calculator {
+  grid-area: calculator;
 }
